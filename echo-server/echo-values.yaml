@@ -1,0 +1,15 @@
+replicaCount: 2
+
+ingress:
+  enabled: true
+  hosts:
+    - host: echo.minikube.local
+      paths:
+        - /
+  annotations:
+    kubernetes.io/ingress.class: nginx
+
+application:
+  logs:
+    ignore:
+      ping: true
